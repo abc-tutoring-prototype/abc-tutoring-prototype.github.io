@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ABC Tutoring Website — Prototype Walkthrough</title>
+<style>
+  @page { size: 1280px 720px; margin: 0; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    color: #2b2b2b;
+  }
+  .slide {
+    width: 1280px;
+    height: 720px;
+    page-break-after: always;
+    padding: 64px 72px;
+    position: relative;
+    background: #fbfbf8;
+    overflow: hidden;
+  }
+  .slide:last-child { page-break-after: auto; }
+  .accent { color: #2f9e6e; }
+  h1 { font-size: 44px; margin: 0 0 8px; }
+  h2 { font-size: 34px; margin: 0 0 28px; color: #237a54; }
+  p.subtitle { font-size: 20px; color: #6b6b6b; margin: 0 0 40px; }
+  .badge {
+    display: inline-block;
+    background: #2f9e6e;
+    color: white;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+  ul.points { font-size: 22px; line-height: 1.7; padding-left: 28px; }
+  ul.points li { margin-bottom: 10px; }
+  .two-col { display: flex; gap: 40px; height: 100%; }
+  .col { flex: 1; }
+  .shot {
+    border: 1px solid #e3e3dc;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    width: 100%;
+    display: block;
+  }
+  .caption { font-size: 16px; color: #6b6b6b; margin-top: 10px; text-align: center; }
+  .footer-brand {
+    position: absolute;
+    bottom: 32px;
+    left: 72px;
+    font-size: 14px;
+    color: #aaa;
+  }
+  .metric-row { display: flex; gap: 32px; margin-top: 30px; }
+  .metric-card {
+    flex: 1;
+    background: white;
+    border: 1px solid #e3e3dc;
+    border-radius: 10px;
+    padding: 24px;
+    text-align: center;
+  }
+  .metric-card .num { font-size: 40px; font-weight: 700; color: #2f9e6e; }
+  .metric-card .label { font-size: 16px; color: #6b6b6b; margin-top: 6px; }
+  .center-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+  }
+  a.link { color: #2f9e6e; word-break: break-all; }
+</style>
+</head>
+<body>
+
+<!-- Slide 1: Title -->
+<section class="slide">
+  <div class="center-slide">
+    <span class="badge">PostHog × ABC Tutoring</span>
+    <h1>A Website for ABC Tutoring</h1>
+    <p class="subtitle" style="font-size:24px; max-width:800px;">
+      A working prototype for browsing tutors, booking sessions, and understanding
+      what your visitors do — built from what you told us, with analytics baked in.
+    </p>
+  </div>
+  <div class="footer-brand">Prepared for Dana · ABC Tutoring</div>
+</section>
+
+<!-- Slide 2: What you told us -->
+<section class="slide">
+  <h2>What You Told Us</h2>
+  <ul class="points">
+    <li><strong>Clean and friendly</strong> — no dark or corporate feel, matching the warmth of your Facebook page.</li>
+    <li><strong>Three key parts:</strong> a simple home page, a tutor listings page, and a clear booking path.</li>
+    <li><strong>Each tutor shows:</strong> name, photo, subjects, grade levels, hourly rate, and open times.</li>
+    <li><strong>Booking flow:</strong> a parent picks a tutor and an open time, then submits their name, email, student's first name and grade, and subject — with a confirmation, and that time slot disappears for everyone else.</li>
+    <li><strong>What matters most to you:</strong> which tutors people look at, and whether that turns into a booking.</li>
+  </ul>
+</section>
+
+<!-- Slide 3: The Prototype -->
+<section class="slide">
+  <h2>The Prototype: Browse &amp; Book</h2>
+  <div class="two-col">
+    <div class="col">
+      <img class="shot" src="browse.jpg">
+      <p class="caption">Parents browse all tutors — photo, subjects, rate, and how many times are still open.</p>
+    </div>
+    <div class="col">
+      <img class="shot" src="booking.jpg">
+      <p class="caption">Picking a tutor shows only their open times. Booking removes that slot instantly — no double-bookings.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Slide 4: Analytics -->
+<section class="slide">
+  <h2>Understanding Your Visitors</h2>
+  <p class="subtitle" style="margin-bottom:20px;">
+    Live dashboard, built around the two questions you asked: which tutors get looked at, and how many of those views become bookings.
+  </p>
+  <img class="shot" src="dashboard.jpg" style="max-height:460px; object-fit:cover; object-position:top;">
+</section>
+
+<!-- Slide 5: Wrap-up -->
+<section class="slide">
+  <div class="center-slide">
+    <h2>Ready for a Look</h2>
+    <ul class="points" style="margin-bottom: 36px;">
+      <li>The live site: <a class="link">https://abc-tutoring-prototype.github.io/</a></li>
+      <li>The analytics dashboard: <a class="link">https://us.posthog.com/shared_dashboard/ZPId7ez1tfYuE79g0dxBkjC5mdBBSA</a></li>
+    </ul>
+    <p style="font-size:20px; color:#6b6b6b; max-width:820px;">
+      This is a starting point — happy to adjust the look, add more tutors, or track anything
+      else you're curious about once real visitors start using it.
+    </p>
+  </div>
+  <div class="footer-brand">Thank you — PostHog team</div>
+</section>
+
+</body>
+</html>
